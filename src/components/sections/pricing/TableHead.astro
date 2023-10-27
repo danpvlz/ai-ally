@@ -1,0 +1,102 @@
+<thead>
+  <tr>
+    <th> Subscription level</th>
+    <th>
+      <div>
+        <span>Basic</span>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="#fff"
+          stroke-width="1.5"
+          stroke="#000"
+          class="w-5 h-5"
+          ><path
+            d="M7.941 18c-.297-1.273-1.637-2.314-2.187-3a8 8 0 1112.49.002c-.55.685-1.888 1.726-2.185 2.998H7.94zM16 20v1a2 2 0 01-2 2h-4a2 2 0 01-2-2v-1h8zm-3-9.995V6l-4.5 6.005H11v4l4.5-6H13z"
+          ></path></svg
+        >
+      </div>
+    </th>
+    <th>
+      <div>
+        <span> Advanced</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="#fff"
+          stroke-width="1.5"
+          stroke="#000"
+          class="w-5 h-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </div>
+    </th>
+    <th>
+      <div>
+        <span> Premium</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="#fff"
+          stroke-width="1.5"
+          stroke="#000"
+          class="w-5 h-5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M12 6l4 6l5 -4l-2 10h-14l-2 -10l5 4z"></path>
+        </svg>
+      </div>
+    </th>
+  </tr>
+</thead>
+
+<style>
+  thead th {
+    background-color: #262728;
+    padding-left: 1rem /* 16px */;
+    padding-right: 1rem /* 16px */;
+  }
+
+  thead th div {
+    width: 138px;
+    padding-top: 0.25rem /* 4px */;
+    padding-bottom: 0.25rem /* 4px */;
+    padding-left: 0.75rem /* 12px */;
+    padding-right: 0.75rem /* 12px */;
+    font-weight: 500;
+    color: black;
+    border-radius: 0.5rem /* 8px */;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  thead th:first-of-type {
+    border-top-left-radius: 1rem /* 16px */;
+    border-bottom-left-radius: 1rem /* 16px */;
+    padding: 1.5rem;
+    text-align: left;
+  }
+  thead th:nth-of-type(2) > div {
+    background-color: #bbf99e;
+  }
+  thead th:nth-of-type(3) > div {
+    background-color: #cdbafe;
+  }
+  thead th:nth-of-type(4) > div {
+    background-color: #eccf87;
+  }
+  thead th:last-of-type {
+    border-top-right-radius: 1rem /* 16px */;
+    border-bottom-right-radius: 1rem /* 16px */;
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import { twMerge } from "tailwind-merge";
+interface Props {
+  text: string;
+  author: string;
+  role: string;
+  className?: string;
+  pic: ImageMetadata;
+}
+
+const { text, author, role, pic, className } = Astro.props;
+---
+
+<div
+  class={twMerge(
+    "rounded-card w-full h-full p-8 bg-zinc-200 flex flex-col justify-between gap-14",
+    className
+  )}
+>
+  <q class="text-xl">{text}</q>
+  <div class="flex gap-4">
+    <Image
+      src={pic}
+      alt={author}
+      class="w-10 rounded-full aspect-square object-cover"
+    />
+    <div class="font-semibold">
+      <p>{author}</p>
+      <p>{role}</p>
+    </div>
+  </div>
+</div>

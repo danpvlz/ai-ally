@@ -1,0 +1,35 @@
+---
+import Button from "../../Button.astro";
+import Statistics from "./statistics/Statistics.astro";
+---
+
+<div class="py-10 lg:py-24 flex flex-col items-center lg:items-start gap-7 max-w-md">
+  <div class="text-center lg:text-left">
+    <h1 class="text-52 leading-none font-medium">Unleash the full potential of AI</h1>
+    <p class="font-light mx-auto lg:mx-0 max-w-[360px] mt-2 opacity-80">
+      AI Ally is a versatile assistant that utilizes state-of-the-art natural
+      language processing to provide real-time support and assistance across
+      various domains.
+    </p>
+  </div>
+  <div class="flex flex-col md:flex-row gap-4 md:gap-10 items-center">
+    <Button className="text-lg">
+      Get the App
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-4 h-4 -rotate-45"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"></path>
+      </svg>
+    </Button>
+    <p class="text-lg">More</p>
+  </div>
+  <Statistics />
+</div>

@@ -1,0 +1,34 @@
+---
+import Card from "./Card.astro";
+import man1 from "../../../assets/testimonials/man1.jpg"
+import man2 from "../../../assets/testimonials/man2.jpg"
+import woman from "../../../assets/testimonials/woman.jpg"
+
+const testimonials = [
+  {
+    text: "The excellent voice recognition quality of AI Ally app makes it perfect for dictation and note taking. I have never come across such accuracy before.",
+    author: "Craig Jordan",
+    role: "CEO, Aveva",
+    className: "bg-[#bbf99e]",
+    pic: man1
+  },
+  {
+    text: "With the help of AI Ally, my work has become much easier and efficient. It provides quick and accurate answers to any questions I come across",
+    author: "David Smith",
+    role: "Head of HR, Instill",
+    className: "bg-[#ccbafe]",
+    pic: man2
+  },
+  {
+    text: "I love how AI Ally personalizes to my needs and offers recommendations and solution based on my preferences and behaviours",
+    author: "Marilyn Long",
+    role: "UX Designer, Cyber Unit",
+    className: "bg-[#a5e4f9]",
+    pic: woman
+  },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+  {testimonials.map((testimonial) => <Card {...testimonial} />)}
+</div>

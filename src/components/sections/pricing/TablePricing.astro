@@ -1,0 +1,18 @@
+---
+import TableBody from "./TableBody.astro";
+import TableHead from "./TableHead.astro";
+---
+
+<table class="hidden md:block">
+  <TableHead />
+  <TableBody />
+</table>
+
+<style>
+  table {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+  }
+</style>

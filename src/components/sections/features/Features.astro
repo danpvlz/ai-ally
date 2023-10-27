@@ -1,0 +1,69 @@
+---
+import Section from "../../Section.astro";
+import phonefeatures from "../../../assets/features/phonefeatureshd.png";
+import { Image } from "astro:assets";
+
+import search from "../../../assets/features/search.svg";
+import rocket from "../../../assets/features/rocket.svg";
+import smarthome from "../../../assets/features/smart-home.svg";
+import playbutton from "../../../assets/features/playbutton.svg";
+import calendar from "../../../assets/features/calendar.svg";
+
+const features = [
+  {
+    title: "Finding information",
+    details: "",
+    img: search,
+  },
+  {
+    title: "Help for designers",
+    details:
+      "AI-powered applications can analyze vast amounts of visual data and provide designers with inspiration for their creative projects.",
+    img: rocket,
+    open:true
+  },
+  {
+    title: "Home automation",
+    details: "",
+    img: smarthome,
+  },
+  {
+    title: "Entertainment",
+    details: "",
+    img: playbutton,
+  },
+  {
+    title: "Planning assistance",
+    details: "",
+    img: calendar,
+  },
+];
+---
+
+<Section
+  id="features"
+  className="max-w-full w-screen bg-[#f4f5f6] pt-20 flex justify-center"
+>
+  <div class="max-w-7xl flex flex-col md:flex-row justify-center w-full gap-10">
+    <div class="flex justify-center md:justify-start">
+      <Image src={phonefeatures} width={phonefeatures.width / 2} alt="Generating a baker" />
+    </div>
+    <div class="flex flex-col gap-4 mt-5 items-center">
+      {
+        features.map(({ title, details, img, open }) => (
+          <details class="w-full max-w-[340px] text-lg bg-white rounded-2xl border-[2px] border-zinc-200 group open:bg-black open:text-white transition-all duration-150" open={open}>
+            <summary class="list-none px-6 py-5 cursor-pointer">
+              <span class="flex gap-2 font-semibold">
+                <span>
+                  <Image src={img} alt="title" class="group-open:invert transition-all duration-150" />
+                </span>{" "}
+                {title}
+              </span>
+            </summary>
+            {details ? <div class="px-6 pb-6 text-base">{details}</div> : null}
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</Section>

@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import apple from "../../../assets/pricing/apple-badge.png";
+import google from "../../../assets/pricing/google-badge.png";
+import phone from "../../../assets/pricing/phone.png";
+---
+
+<div class="flex flex-col md:flex-row justify-center mt-28 gap-20">
+  <div class="flex flex-col justify-center gap-7">
+    <div class="flex flex-col gap-4 max-w-md  text-center md:text-left mx-auto md:mx-0">
+      <h3 class="text-5xl">Try it right now</h3>
+      <p>
+        Download the AI Ally on the AppStore and Google Play and discover the
+        world of artificial intelligence! Enjoy innovative AI technologies
+        directly on your device.
+      </p>
+    </div>
+    <div class="flex flex-col md:flex-row items-center md:items-start">
+      <Image
+        src={apple}
+        width={apple.width / 3.75}
+        class="object-contain"
+        alt="Download from apple"
+      />
+      <Image
+        src={google}
+        width={google.width / 3}
+        class="object-contain"
+        alt="Download from google play"
+      />
+    </div>
+  </div>
+  <div class="flex justify-center md:justify-start">
+    <Image src={phone} width={phone.width / 2.5} alt="App features" />
+  </div>
+</div>

@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+interface Props {
+  src: ImageMetadata;
+  title: string;
+  description: string;
+}
+
+const { src, title, description } = Astro.props;
+---
+
+<div>
+  <div class="relative">
+    <div
+      class="absolute inset-0 rounded-card bg-gradient-to-b from-transparent to to-black opacity-30"
+    >
+    </div>
+    <Image
+      src={src}
+      alt={title}
+      class="rounded-card aspect-square object-cover object-left"
+    />
+    <button
+      class="absolute bg-white top-5 left-5 px-4 py-2 font-medium rounded-full hover:brightness-90 transition-all duration-150 shadow-sm"
+      >Try it now</button
+    >
+  </div>
+
+  <p class="text-2xl font-medium mt-5">{title}</p>
+  <p class="font-medium leading-tight mt-3">{description}</p>
+</div>

@@ -1,0 +1,158 @@
+---
+import Header from "../components/Header.astro";
+import FontLoader from "../components/FontLoader.astro";
+import Footer from "../components/Footer.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <FontLoader />
+  </head>
+  <body class="text-text w-full">
+    <Header />
+    <slot />
+    <Footer />
+  </body><style is:global>
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialBlack.woff") format("woff");
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialBlackItalic.woff") format("woff");
+      font-weight: 900;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialExtraBold.woff") format("woff");
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialExtraBoldItalic.woff") format("woff");
+      font-weight: 800;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialBold.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialBoldItalic.woff") format("woff");
+      font-weight: 700;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialSemiBold.woff") format("woff");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialSemiBoldItalic.woff") format("woff");
+      font-weight: 600;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialMedium.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialMediumItalic.woff") format("woff");
+      font-weight: 500;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialRegular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialItalic.woff") format("woff");
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialLight.woff") format("woff");
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialLightItalic.woff") format("woff");
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialExtraLight.woff") format("woff");
+      font-weight: 200;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialExtraLightItalic.woff") format("woff");
+      font-weight: 200;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialThin.woff") format("woff");
+      font-weight: 100;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "TTFirsNeueTrial";
+      src: url("/fonts/TTFirsNeueTrialThinItalic.woff") format("woff");
+      font-weight: 100;
+      font-style: italic;
+      font-display: swap;
+    }
+    html {
+      font-family: "TTFirsNeueTrial", sans-serif;
+    }
+  </style>
+</html>

@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import aially from "../assets/aially-black.png"
+import Button from "./Button.astro";
+---
+
+<header class="w-full font-medium text-lg flex flex-wrap gap-4 sm:gap-0 sm:flex-nowrap justify-between items-center max-w-6xl py-6 mx-auto px-0 md:px-3">
+    <a href="/" class="flex items-center gap-3 order-1">
+        <Image src={aially} width={30} height={30} alt="ai ally logo" />
+        <p>AI Ally</p>
+    </a>
+    <nav class="order-3 sm:order-2 mx-auto overflow-x-auto">
+        <ul class="flex gap-5 md:gap-10">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+    </nav>
+    <Button className="order-2 sm:order-3">Sign in</Button>
+</header>

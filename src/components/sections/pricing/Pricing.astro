@@ -1,0 +1,19 @@
+---
+import Section from "../../Section.astro";
+import Title from "../../Title.astro";
+import CardsPricing from "./CardsPricing.astro";
+import TablePricing from "./TablePricing.astro";
+import DownloadBanner from "./DownloadBanner.astro";
+---
+
+<Section
+  id="pricing"
+  className="max-w-7xl w-full "
+>
+<div class="rounded-4xl bg-[#181a1b] text-white px-8 md:px-16 pt-16 overflow-hidden">
+  <Title className="text-center md:text-start">Choose your favorite plan</Title>
+  <CardsPricing />
+  <TablePricing />
+  <DownloadBanner />
+</div>
+</Section>

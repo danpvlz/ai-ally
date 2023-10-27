@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import aially from "../assets/aially-white.png";
+---
+
+<footer class="w-full max-w-6xl pb-0 md:pb-10 mx-auto px-0 md:px-3">
+  <div class="flex flex-col md:flex-row items-center gap-8 md:items-start justify-between py-8 font-semibold">
+    <a href="/" class="flex items-center gap-3">
+      <Image src={aially} width={30} height={30} alt="ai ally logo" />
+      <p>AI Ally</p>
+    </a>
+    <ul class="flex flex-col md:flex-row text-center md:text-start gap-2 md:gap-10">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+    </ul>
+    <ul class="flex flex-col md:flex-row text-center md:text-start gap-2 md:gap-10">
+      <li>Instagram</li>
+      <li>Facebook</li>
+      <li>Twitter</li>
+    </ul>
+  </div>
+  <hr />
+  <div class="flex flex-col md:flex-row text-center md:text-left w-full justify-between py-6 opacity-70 font-medium text-sm">
+    <p>Copyright © 2023 Ai Ally</p>
+    <p>Privacy Policy</p>
+  </div>
+  <div class="text-center">
+    <a class="text-light-blue underline" href="https://dribbble.com/shots/22834663-App-Landing-Page" target="_blank" rel="noreferrer">Development of figma design: AI Ally</a>
+  </div>
+</footer>
